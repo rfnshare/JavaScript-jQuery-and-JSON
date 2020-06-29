@@ -1,10 +1,19 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Sample</title>
+    <title>Sample</title>
+    <script src="js/myscript.js"></script>
 </head>
 <body>
-	<a href="pageOne.html" onclick="alert('a'); return false;">Next page</a>
+<a href="pageOne.html" onclick="alert('a'); return true;">Next page</a>
 
+<p><a href="#" onclick="add(); return false;">More</a></p>
+<ul id="the-list">
+    <li>First Item</li>
+</ul>
+<input type="button" onclick="hAdd();" value="Create H6">
+<div id="h-list">
+    <h6>First H</h6>
+</div>
 </body>
 </html>
