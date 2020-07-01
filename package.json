@@ -1,0 +1,24 @@
+{
+  "name": "javascript_jquery_json",
+  "version": "1.0.0",
+  "description": "javascript practice",
+  "main": "index.html",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "npm run lite",
+    "lite": "lite-server"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/RFNshare/JavaScript-jQuery-and-JSON.git"
+  },
+  "author": "Abdullah Al Faroque",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/RFNshare/JavaScript-jQuery-and-JSON/issues"
+  },
+  "homepage": "https://github.com/RFNshare/JavaScript-jQuery-and-JSON#readme",
+  "devDependencies": {
+    "lite-server": "^2.5.4"
+  }
+}
