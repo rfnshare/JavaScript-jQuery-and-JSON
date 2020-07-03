@@ -7,24 +7,94 @@
 <body>
 <h2>Finding HTML Elements Using document.forms</h2>
 
-<form>
-    First name: <input type="text" id="fname" name="fname" value="Abdullah Al"><br>
-    Last name: <input type="text" id="lname" name="lname" value="Faroque"><br><br>
+<form name="myForm" onsubmit="return validate()">
+    Full name: <input type="text" id="name" name="name"><br><br>
+    <!--    <span id="fullname" style="text-decoration-color: red"></span><br><br>-->
+    User name: <input type="text" id="uname" name="uname"><br><br>
+    Password: <input type="password" id="pass" name="pass"><br><br>
+    Confirm Password: <input type="password" id="cpass" name="cpass"><br><br>
+    Mobile Number: <input type="tel" id="mnum" name="mnum"><br><br>
+    Email: <input type="email" id="email" name="email"><br><br>
     <input type="submit" value="Submit">
 </form>
 
-<p>Click "Try it" to display the value of each element in the form.</p>
+<p id="demo"></p><br>
 
-<button onclick="myFunction()">Try it</button>
+<p id="demo1"></p><br>
 
-<p id="demo"></p>
+<p id="demo2"></p><br>
+
+<p id="demo3"></p><br>
 
 <script>
-    function myFunction() {
-        var x = document.getElementById('fname').value;
-        var y = document.getElementById('lname').value;
-        document.getElementById('demo').innerHTML = x + "<br>" + y;
-
+    function validate() {
+        var name = document.getElementById('name').value;
+        var uname = document.getElementById('uname').value;
+        var pass = document.getElementById('pass').value;
+        var cpass = document.getElementById('cpass').value;
+        var mnum = document.getElementById('mnum').value;
+        var email = document.getElementById('email').value;
+        if (name == "") {
+            document.getElementById('demo').innerHTML = "Write your full name";
+            return false;
+        }
+        if (uname == "") {
+            document.getElementById('demo').innerHTML = "Write your user name";
+            return false;
+        }
+        if ((uname.length <=2) || (uname.length >20) ) {
+            document.getElementById('demo').innerHTML = "User Length must be between 2 and 20";
+            return false;
+        }
+        if (!isNaN(uname))
+        {
+            document.getElementById('demo').innerHTML = "User name only contain charecter";
+            return false;
+        }
+        if (pass == "") {
+            document.getElementById('demo').innerHTML = "Type password";
+            return false;
+        }
+        if ((pass.length <=5) ) {
+            document.getElementById('demo').innerHTML = "User password must be 6 or more";
+            return false;
+        }
+        if (pass!=cpass)
+        {
+            document.getElementById('demo').innerHTML = "Password Don't Matched";
+            return false;
+        }
+        if (cpass == "") {
+            document.getElementById('demo').innerHTML = "Type again your password";
+            return false;
+        }
+        if (mnum == "") {
+            document.getElementById('demo').innerHTML = "Type your Mobile Number";
+            return false;
+        }
+        if (isNaN(mnum))
+        {
+            document.getElementById('demo').innerHTML = "not chareacter only digit";
+            return false;
+        }
+        if ((mnum.length != 11)  ) {
+            document.getElementById('demo').innerHTML = "Mobile Number must be 11 Digits";
+            return false;
+        }
+        if (email == "") {
+            document.getElementById('demo').innerHTML = "Type your Email Address";
+            return false;
+        }
+        if (email.indexOf('@') <=0)
+        {
+            document.getElementById('demo').innerHTML = " your Email Address @ position invalid";
+            return false;
+        }
+        if ( (email.charAt (email.length-4)!= '.') && (email.charAt (email.length-3)!= '.') )
+        {
+            document.getElementById('demo').innerHTML = " Invalid email";
+            return false;
+        }
     }
 </script>
 </body>
