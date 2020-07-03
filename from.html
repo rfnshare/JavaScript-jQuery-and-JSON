@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h2>Finding HTML Elements Using document.forms</h2>
+
+<form>
+    First name: <input type="text" id="fname" name="fname" value="Abdullah Al"><br>
+    Last name: <input type="text" id="lname" name="lname" value="Faroque"><br><br>
+    <input type="submit" value="Submit">
+</form>
+
+<p>Click "Try it" to display the value of each element in the form.</p>
+
+<button onclick="myFunction()">Try it</button>
+
+<p id="demo"></p>
+
+<script>
+    function myFunction() {
+        var x = document.getElementById('fname').value;
+        var y = document.getElementById('lname').value;
+        document.getElementById('demo').innerHTML = x + "<br>" + y;
+
+    }
+</script>
+</body>
+</html>
