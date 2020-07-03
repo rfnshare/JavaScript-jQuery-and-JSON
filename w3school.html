@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Practice</title>
+    <link href="css/styles.css">
+    <script src="js/w3school.js"></script>
+    <script src="vendor/jQuery/jquery-3.5.1.min.js"></script>
+    <style>
+        .democlass {
+            color: red;
+        }
+    </style>
+</head>
+<body>
+<h1 >JavaScript Can Validate Input</h1><br> &nbsp;
+<button onclick="check()">Click for Red</button>
+<p>Please input a number between 1 and 10:</p><br>
+
+<form action="" method="post">
+    <input type="text" id="number" required> &nbsp;
+    <input type="submit" value="Submit" onclick="numValidate()"><br>
+    <p id="demo"></p><br>
+    <label for="name">Name:</label>
+    <input type="text" id="name" name="name" required> &nbsp;
+    <input type="submit" value="Registration"><br>
+</form>
+
+<input type="number" min="10" max="20" id="num" name="num" required> &nbsp;<br>
+<input type="submit" value="Test"><br>
+<script src="js/w3school.js"></script>
+</body>
+</html>
